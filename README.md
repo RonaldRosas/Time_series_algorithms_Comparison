@@ -1,34 +1,27 @@
 # Time_series_algorithms_Comparison
-Comparison of time series forecasting algorithms (ARIMA, SARIMA, SARIMAX, Random Forest, XGBoost, Linear Regression) using exchange rate data. Evaluates accuracy and efficiency with custom metrics, emphasizing feature engineering, model performance, and computational speed for optimized forecasting.
+This project evaluates and compares various time series forecasting algorithms, including ARIMA, SARIMA, SARIMAX, Random Forest, XGBoost, and Linear Regression. The comparison is conducted using a dataset of monthly exchange rates and related economic indicators, emphasizing both prediction accuracy and computational efficiency. The analysis includes custom performance metrics and optimization scores to rank models based on their ability to balance accuracy, training time, and prediction speed. The project aims to provide insights into selecting the most suitable algorithm for time series forecasting tasks while demonstrating practical feature engineering, model evaluation, and visualization techniques.
 ---
+## Dashboard Report
 
-## Project Overview
+This project includes an interactive dashboard report created in Power BI, summarizing the key findings and insights visually.
+### Full Dashboard
+Explore the full interactive dashboard [here](https://app.powerbi.com/view?r=eyJrIjoiZTk3YTIxMjYtMmQxOC00M2Q2LWI1NmItODExYzBkMTZmZmE0IiwidCI6IjU3N2ZjMWQ4LTA5MjItNDU4ZS04N2JmLWVjNGY0NTVlYjYwMCIsImMiOjR9).
 
-The primary objective of this project is to analyze, preprocess, and forecast data using multiple algorithms, including:
-- **ARIMA**
-- **SARIMA**
-- **SARIMAX**
-- **Random Forest**
-- **XGBoost**
-- **Linear Regression**
-- **Prophet**
-- **Holt-Winters**
-
-The dataset includes Exchange Rate, Coffee Prices, Oil Prices, S&P 500 Index, GDP, and Inflation Rates, enabling robust forecasting and evaluation of diverse models.
+![Dashboard Page 1](Dashboard_report_images/Dashboard_page1.png)
+![Dashboard Page 3](Dashboard_report_images/Dashboard_page3.png)
 
 ---
-
 ## Steps to Complete the Project
 
 ### 1. Install Required Packages and Libraries
-#### 1. **Time Series Modeling**
+#### 1.1 **Time Series Modeling**
 - **`statsmodels`**: Used for classical time series models like ARIMA, SARIMAX, and Holt-Winters. Provides powerful statistical tools for analyzing and forecasting time series data.
   - `ARIMA`, `SARIMAX`: Models for univariate and multivariate time series with trend and seasonal components.
   - `ExponentialSmoothing`: Implements Holt-Winters smoothing for trend and seasonality.
 
 - **`prophet`**: A robust library designed for forecasting time series data, handling seasonality, holidays, and missing values with ease.
 
-#### 2. **Machine Learning**
+#### 1.2. **Machine Learning**
 - **`scikit-learn`**: Provides tools for data preprocessing, feature scaling, and machine learning algorithms:
   - `RandomForestRegressor`: An ensemble method for regression tasks, robust to outliers and non-linear patterns.
   - `LinearRegression`: A simple and interpretable algorithm for modeling linear relationships.
@@ -37,19 +30,19 @@ The dataset includes Exchange Rate, Coffee Prices, Oil Prices, S&P 500 Index, GD
 
 - **`xgboost`**: A gradient boosting framework used for building powerful and efficient regression models. The `XGBRegressor` was implemented for its ability to handle non-linear relationships and large datasets efficiently.
 
-#### 3. **Web Scraping**
+#### 1.3. **Web Scraping**
 - **`yfinance`**: Simplifies the process of downloading historical market data (e.g., Exchange Rate, Oil Prices, S&P 500 Index) directly from Yahoo Finance.
 - **`requests`** and **`BeautifulSoup`**: Used to scrape interest rate data from `datosmacro.com`, enabling integration of external macroeconomic factors into the analysis.
 
-#### 4. **Data Manipulation and Analysis**
+#### 1.4. **Data Manipulation and Analysis**
 - **`pandas`**: The backbone of data manipulation, allowing easy handling of time series data, merging datasets, and cleaning raw data.
 - **`numpy`**: Essential for numerical computations, array manipulations, and mathematical operations.
 
-#### 5. **Visualization**
+#### 1.5. **Visualization**
 - **`matplotlib`**: The foundational library for creating static, animated, and interactive visualizations.
 - **`seaborn`**: Built on `matplotlib`, used for producing visually appealing statistical graphics and enhancing data understanding.
 
-#### 6. **Performance Monitoring**
+#### 1.6. **Performance Monitoring**
 - **`time`**: Used for monitoring the execution time of models and processes, crucial for evaluating computational efficiency.
 
 
@@ -117,7 +110,7 @@ The dataset includes Exchange Rate, Coffee Prices, Oil Prices, S&P 500 Index, GD
 
 ## Key Findings and Insights
 - The comparative performance of models varies based on data properties, such as stationarity and seasonality.
-- Machine learning models (e.g., Random Forest and XGBoost) performed well for data with non-linear relationships.
+- Machine learning models (e.g., Random Forest and XGBoost) performed poorly even after adding a time index column to help them identify historical patterns.
 - Classical models like SARIMAX provided reliable results for strongly seasonal data.
 - Prophet demonstrated robust handling of seasonality with user-friendly implementation.
 
@@ -125,5 +118,5 @@ The dataset includes Exchange Rate, Coffee Prices, Oil Prices, S&P 500 Index, GD
 
 ## Contact
 For questions or feedback, feel free to reach out:
-- 📧 Email: ronaldrosasfonseca@gmail.com
+- 📧 Email: ronaldfc93@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/ronald-rosas-fonseca-b39323187/)
